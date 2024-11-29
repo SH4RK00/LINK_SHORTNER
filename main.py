@@ -19,7 +19,7 @@ def is_valid(url):
         return False
 
 def is_exit():
-    user = input("\033[0;32m~ enter \033[0;31m0 \033[0;32mto exit \n~\033[0;32melse press anthing to continue ")
+    user = input("\033[0;32m~ enter \033[0;31m0 \033[0;32mto exit \n~\033[0;32m else press anthing to continue ")
     if user in ( 0,"0",'0'):
         return False
     else:
@@ -63,18 +63,22 @@ animate(logo)
 terminate = True
 while terminate:
 
-    url = input("\033[0;34mEnter your link :")
+    url = input("\033[0;32mEnter your link :\033[0;34m")
 
     if is_valid(url):
         animate(text)
         time.sleep(1)
         s = pyshorteners.Shortener()
         provide = s.tinyurl.short(url)
-        print(f"\033[0;34myour shorten link is :{provide}")
+        print(f"\033[0;32myour shorten link is :\033[1;33m{provide}")
         time.sleep(1)
+        print("\n")
         terminate = is_exit()
+        print("\n")
 
     else:
         animate(warn)
         time.sleep(1)
+        print("\n")
         terminate = is_exit()
+        print("\n")
