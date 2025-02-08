@@ -15,3 +15,8 @@ pip install -r requirements.txt
 
 python main.py
 
+
+screenshot :
+
+![screenshot](./468785120_1638809687065952_3590959833885827843_n.jpg)
+
